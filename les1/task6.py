@@ -1,4 +1,20 @@
+a = float(input("a = "))
+b = float(input("b = "))
+# a = 2
+# b = 3
 
+output = 1
+while True:
+    if a < b:
+        a += a/10
+        # print(a)
+        output += 1
+        if output > 10000:
+            print("over 10 years")
+            break
+    else:
+        print(f"На {output} день")
+        break
 
 
 # Спортсмен занимается ежедневными пробежками.
