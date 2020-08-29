@@ -1,3 +1,56 @@
+goods_list = []
+
+G_NAME = "Название"
+G_COST = "Цена"
+G_COUNT = "Количество"
+G_UNIT = "ед."
+
+INPUT_TABS = (G_NAME, G_COST, G_COUNT, G_UNIT)
+
+print("Вводите характеристики товара")
+print("Для прекращения - введите '0'")
+print("-" * 42 + "\n")
+
+counter = 0
+while True:
+    t_dict = {}
+    for tab in INPUT_TABS:
+        temp = input(f"Введите {tab}: ")
+        t_dict[tab] = temp
+        if temp == "0":
+            break
+    if "0" in t_dict.values():
+        break
+    else:
+        # Добавить товар в список
+        input_couple = (counter, t_dict)
+        print(f"Добавлен товар: {input_couple}")
+        print("-" * 42 + "\n")
+        goods_list.append(input_couple)
+        counter += 1
+
+# print(goods_list)
+# Сборка словаря-аналитики
+# D_ID = "ID"
+analytics_dict = {
+    G_NAME: [],
+    G_COST: [],
+    G_COUNT: [],
+    G_UNIT: []
+}
+for good in goods_list:
+    # analytics_dict[D_ID].append(good[0])
+    for tab in INPUT_TABS:
+        analytics_dict[tab].append(good[1].get(tab))
+
+# Далее реализовать вывод словаря-аналитики
+# print(f"{D_ID:4} {G_NAME:20} {G_COST:13} {G_COUNT:10} {G_UNIT:10}")
+print("-" * 42)
+print("Аналитика товара:"  + "\n")
+for d_tab in analytics_dict:
+    print(f"{d_tab:13}# {analytics_dict.get(d_tab)}")
+
+# --------------------------------------------------------------------------
 # * Реализовать структуру данных «Товары».
 # Она должна представлять собой список кортежей.
 # Каждый кортеж хранит информацию об отдельном товаре.
