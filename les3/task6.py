@@ -7,3 +7,14 @@
 # Каждое слово состоит из латинских букв в нижнем регистре.
 # Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 # Необходимо использовать написанную ранее функцию int_func().
+
+def int_func(sss):
+    """мой Аналог .title()"""
+    ch = chr(int(ord(sss[0])) - 32)
+    return f"{ch}{sss[1:]}"
+
+
+list_input = list(map(lambda ss: ss.lower(), input("Расскажите о себе: ").split()))
+
+for string in list_input:
+    print(int_func(string))
