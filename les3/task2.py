@@ -2,3 +2,15 @@
 # имя, фамилия, год рождения, город проживания, email, телефон.
 # Функция должна принимать параметры как именованные аргументы.
 # Реализовать вывод данных о пользователе одной строкой.
+
+def mf(name, sname, year, town, email, phone):
+    print(f"Имя: {name}, Фамилия: {sname}, Год р.: {year}, Город прож.: {town}, email: {email}, Телефон: {phone}")
+
+
+n1 = input("Имя: ")
+n2 = input("Фамилия: ")
+n3 = input("Год рождения: ")
+n4 = input("Город проживания: ")
+n5 = input("email: ")
+n6 = input("Телефон: ")
+mf(phone=n6, email=n5, town=n4, year=n3, sname=n2, name=n1)
