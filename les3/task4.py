@@ -25,7 +25,11 @@ def my_func(x, y):
     return temp if y >= 0 else 1/temp
 
 
-xx, yy = map(int, input("Ввод: ").split())
+# xx, yy = map(int, input("Ввод: ").split())
+# Поправка на условие задачи
+xx, yy = input("Ввод: ").split()
+xx = float(xx)
+yy = int(yy)
 
 print(my_func_h(xx, yy))
 print(my_func(xx, yy))
