@@ -1,3 +1,21 @@
+import itertools
+import random
+
+m_list = []
+t_list = []
+
+for i in itertools.count(97):
+    m_list.append(random.randint(i, 122))
+    if len(m_list) > 5:
+        print(m_list)
+        break
+
+for j in itertools.cycle(m_list):
+    t_list.append(chr(j))
+    if len(t_list) > 2 * len(m_list):
+        print(t_list)
+        break
+
 # 6. Реализовать два небольших скрипта:
 # а) итератор, генерирующий целые числа, начиная с указанного,
 # б) итератор, повторяющий элементы некоторого списка, определенного заранее.
