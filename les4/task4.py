@@ -1,3 +1,18 @@
+import random
+
+
+random_list = [random.randint(1, 7) for i in range(10)]
+result = []
+
+for i in random_list:
+    if random_list.count(i) > 1:
+        continue
+    else:
+        result.append(i)
+
+print(random_list)
+print(result)
+
 # 4. Представлен список чисел. Определить элементы списка, не имеющие повторений.
 # Сформировать итоговый массив чисел, соответствующих требованию.
 # Элементы вывести в порядке их следования в исходном списке.
