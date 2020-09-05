@@ -1,11 +1,12 @@
-import random
 import functools
 
 
-random_list = [random.randrange(100, 1000) for i in range(2)]
-print(random_list)
+m_list = [el for el in range(100, 1001) if el % 2 == 0]
+print(m_list)
 
-print(functools.reduce(lambda x, y: x * y, random_list))
+# Поменял произведение на сумму
+# Ибо, число получается большое и бессмысленное
+print(functools.reduce(lambda x, y: x + y, m_list))
 
 # 5. Реализовать формирование списка, используя функцию range() и возможности генератора.
 # В список должны войти четные числа от 100 до 1000 (включая границы).
