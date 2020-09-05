@@ -1,3 +1,18 @@
+# def fact(count):
+#     if count == 1:
+#         yield 1
+#     yield next(fact(count - 1)) * count
+
+def fact(num):
+    result = 1
+    for i in range(1, num + 1):
+        result *= i
+        yield result
+
+
+for el in fact(7):
+    print(el)
+
 # 7. Реализовать генератор с помощью функции
 # с ключевым словом yield, создающим очередное значение.
 # При вызове функции должен создаваться объект-генератор.
