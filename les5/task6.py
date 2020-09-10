@@ -1,3 +1,16 @@
+# Fizra: - 30(пр) -
+mdict = {}
+with open("res/text_6.txt", "r", encoding="utf-8") as mfile:
+    for line in mfile:
+        temp = line.replace("\n", "").split()
+        count = 0
+        for tab in temp[1:]:
+            if tab == "-":
+                continue
+            count += int(tab.split("(")[0])
+
+        mdict[temp[0][:-1]] = count
+print(mdict)
 
 # 6. Необходимо создать (не программно) текстовый файл,
 # где каждая строка описывает учебный предмет и наличие лекционных,
