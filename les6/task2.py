@@ -1,3 +1,15 @@
+class Road:
+    def __init__(self, length_m, width_m):
+        self._length = length_m
+        self._width = width_m
+
+    # масса 1кв м и толщина покрытия
+    def metod_rascheta_massy(self, mass_of_1m2, tolwyna_m):
+        return self._length * self._width * mass_of_1m2 * tolwyna_m
+
+
+m_road = Road(100, 2)
+print(m_road.metod_rascheta_massy(1, 4))
 
 # 2. Реализовать класс Road (дорога),
 # в котором определить атрибуты: length (длина), width (ширина).
