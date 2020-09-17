@@ -1,4 +1,4 @@
-class MyMatrix(object):
+class MyMatrix:
     def __init__(self, *args):
         # размерность матрицы
         self.__n = len(args[0])
