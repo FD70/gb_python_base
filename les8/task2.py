@@ -3,16 +3,16 @@ class MyownExeption(Exception):
         self.text = f"MyownException: {text}"
 
 
-def meth(v1: int, v2: int):
+def simple_div(v1: int, v2: int):
     if v2 == 0:
         raise MyownExeption(f"В выражении {v1}/{v2} присутствует деление на ноль")
     else:
         return v1/v2
 
 
+temp = "---nothing---"
 try:
-    temp = "nothing"
-    temp = meth(1, 0)
+    temp = simple_div(1, 0)
 except MyownExeption as e:
     print(e.text)
 finally:
